@@ -1,6 +1,13 @@
 name: Lint Code Base
 
-on: push
+on:
+
+  push:
+    branches:
+      - master
+      
+  schedule:
+  - cron: "15 * * * *" # See https://crontab.guru/#0_7,9,11_*_*_1,3
 
 jobs:
   build:
